@@ -30,7 +30,6 @@
 			<bodyPartGroups>
 				<li>UpperHead</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier1/TGDarkHelmet1Tier</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -40,9 +39,6 @@
                 <li>Helmet1Tier</li>
                 <li>Ensign</li>
             </tags>
-            <defaultOutfitTags>
-                <li>Soldier</li>
-            </defaultOutfitTags>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
         </apparel>
     </ThingDef>
@@ -56,6 +52,9 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier1/TGDarkHelmet1Tier</wornGraphicPath>
+        </apparel>
     </ThingDef>
   
     <ThingDef ParentName="Helmet1Tier">
@@ -67,6 +66,9 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier1/TGLightHelmet1Tier</wornGraphicPath>
+        </apparel>
     </ThingDef>
 
     <!--== Tier 2 ==-->
@@ -106,7 +108,6 @@
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier2/TGDarkHelmet2Tier</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -133,6 +134,9 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier2/TGDarkHelmet2Tier</wornGraphicPath>
+        </apparel>
     </ThingDef>
 
     <ThingDef ParentName="Helmet2Tier">
@@ -144,6 +148,117 @@
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/HelmetTier2/TGLightHelmet2Tier</wornGraphicPath>
+        </apparel>
     </ThingDef>
 
+    <!--== ImperalUniformHats ==-->
+
+    <ThingDef ParentName="ArmorHelmetMakeableBase" Name="ImperalUniformHats" Abstract="True">
+        <techLevel>Industrial</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costStuffCount>20</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costList>
+            <Steel>5</Steel>
+        </costList>
+        <statBases>
+            <WorkToMake>1800</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>0.14</Mass>
+            <Insulation_Cold>2</Insulation_Cold>
+            <Insulation_Heat>1</Insulation_Heat>
+            <EquipDelay>0.8</EquipDelay>
+        </statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+                <li>Imperial</li>
+                <li>ImperalUniformHats</li>
+                <li>Ensign</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+            <useDeflectMetalEffect>true</useDeflectMetalEffect>
+        </apparel>
+    </ThingDef>
+  
+    <ThingDef ParentName="ImperalUniformHats">
+        <defName>Apparel_TGImperalOfficer</defName>
+        <label>Imperal Officer</label>
+        <description>The Imperal would use outfit to show they were Officers.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalOfficerDisplay</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalOfficer</wornGraphicPath>
+			<tags>
+                <li>ImperialOfficer</li>
+            </tags>
+        </apparel>
+        <equippedStatOffsets>
+            <SocialImpact>0.1</SocialImpact>
+            <NegotiationAbility>0.15</NegotiationAbility>
+        </equippedStatOffsets>
+    </ThingDef>
+  
+    <ThingDef ParentName="ImperalUniformHats">
+        <defName>Apparel_TGImperalLowrankOfficer</defName>
+        <label>Imperal Lowrank Officer</label>
+        <description>They would use this outfit to show they were Imperal Lowrank Officer, Stormtrooper Officers and Security.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalLowrankOfficerDisplay</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalLowrankOfficer</wornGraphicPath>
+			<tags>
+                <li>ImperialLowrankOfficer</li>
+            </tags>
+        </apparel>
+        <equippedStatOffsets>
+            <SocialImpact>0.15</SocialImpact>
+            <NegotiationAbility>0.1</NegotiationAbility>
+        </equippedStatOffsets>
+    </ThingDef>
+  
+    <ThingDef ParentName="ImperalUniformHats">
+        <defName>Apparel_TGImperalCrewMember</defName>
+        <label>Imperal CrewMember</label>
+        <description>The Imperal would use this outfit to show they were crewmembers or technicians.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalCrewMemberDisplay</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Item/Equipment/Headgear/ImperalUniformHats/TGImperalCrewMember</wornGraphicPath>
+			<tags>
+                <li>ImperialCrewMember</li>
+            </tags>
+        </apparel>
+        <equippedStatOffsets>
+            <SocialImpact>0.1</SocialImpact>
+			<ConstructionSpeed>0.15</ConstructionSpeed>
+        </equippedStatOffsets>
+    </ThingDef>
+    
 </Defs>
